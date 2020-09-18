@@ -14,7 +14,7 @@ func main() {
 	//log.Println("res:",s)
 	//log.Println("err:",err)
 
-	s1, err1 := sshExecAgent.SshHostByKey([]string{"172.16.10.126", "172.16.10.125"}, 22, "root", "ls -l")
+	s1, err1 := sshExecAgent.SshHostByKey([]string{"172.16.10.126:8093", "172.16.10.125:8093"}, 22, "root", "ls -l")
 	log.Println("res:", s1)
 	log.Println("err:", err1)
 	for {

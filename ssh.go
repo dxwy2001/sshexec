@@ -80,7 +80,7 @@ func (s *SSHExecAgent) SshHostByKey(hosts []string, port int, user string, cmd s
 				hostInfoIp := hostInfo[0]
 				if len(hostInfo) > 1 {
 					portInt, err := strconv.Atoi(hostInfo[1])
-					if err != nil {
+					if err == nil {
 						port = portInt
 					}
 				}
@@ -157,7 +157,7 @@ func (s *SSHExecAgent) SftpHostByKey(hosts []string, port int, user string, loca
 				hostInfoIp := hostInfo[0]
 				if len(hostInfo) > 1 {
 					portInt, err := strconv.Atoi(hostInfo[1])
-					if err != nil {
+					if err == nil {
 						port = portInt
 					}
 				}
